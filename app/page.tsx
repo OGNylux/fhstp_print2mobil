@@ -8,40 +8,22 @@ export default function Home() {
       <main className="">
         <Navbar />
         <Hero />
-        <section id="about" className="min-h-screen pt-16 flex flex-col items-center justify-center py-20 px-4">
-          
-          <div className="w-">
-            <p className="">
+        <section id="about" className="min-h-screen pt-12 flex flex-col items-center justify-center py-12 px-4 bg-stone-100">
+          <h1 className="text-2xl md:text-4xl text-black font-bold pb-6 md:pb-10">About Us</h1>
+          <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 border-2 p-4 md:p-6 rounded-lg bg-white border-lime-500 text-black">
+            <p className="text-sm md:text-base leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. 
+              Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. 
+              Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.
+            </p>
+            <Image src="/people.jpg" width={800} height={450} alt="team" className="w-full rounded-md object-cover aspect-[16/9]" />
+            <Image src="/people.jpg" width={800} height={450} alt="entwicklung" className="w-full rounded-md object-cover aspect-[16/9]" />
+            <p className="text-sm md:text-base leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. 
+              Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. 
+              Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.
             </p>
           </div>
-          <Image src="/people.jpg" width={500} height={300} alt="team" className="h-[auto] w-full rounded-md" />
-          <Image src="/people.jpg" width={500} height={300} alt="entwicklung" className="h-[auto] w-full rounded-md" />
-          <div>
-            <p className="">
-            </p>
-          </div>
-        </section>
-
-        <section id="how-it-works" className="min-h-screen pt-16 flex flex-col items-center justify-center py-20 px-4">
-          <h2 className="text-2xl font-bold mb-4">How it works</h2>
-          <p className="text-gray-700 mb-8 max-w-2xl text-center">Explanation of how the app works.</p>
-        </section>
-
-        <section id="projects" className="min-h-screen pt-16 flex flex-col items-center justify-center py-20 px-4">
-          <h2 className="text-2xl font-bold mb-4">Our Projects</h2>
-          <p className="text-gray-700 mb-8 max-w-2xl text-center">Some of our featured projects.</p>
-        </section>
-
-        <section id="contact" className="min-h-screen pt-16 flex flex-col items-center justify-center py-20 px-4">
-          <h2 className="text-2xl font-bold mb-4">Contact</h2>
-          <p className="text-gray-700 mb-8 max-w-2xl text-center">Get in touch with us.</p>
-          <Image
-            src="/images/hero.png"
-            alt="Hero Image"
-            width={500}
-            height={300}
-            className="rounded-lg shadow-lg"
-          />
         </section>
       </main>
     </div>
