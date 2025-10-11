@@ -8,7 +8,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className={`sticky top-0 z-50 w-full bg-stone-50 text-black drop-shadow-sm ${open ? '' : 'rounded-b-3xl'}`}>
+           <nav className={`fixed top-0 left-0 z-50 w-full bg-stone-50 text-black drop-shadow-sm ${open ? '' : 'rounded-b-3xl'}`}>
             <div className="mx-auto flex items-center justify-between h-16 px-4 md:px-8">
                 {/* Left: logo */}
                 <div className="flex items-center">
@@ -16,7 +16,7 @@ export default function Navbar() {
                     <h1 className="text-lg font-bold">TreeFund</h1>
                 </div>
 
-                {/* Center links (hidden on small screens) */}
+                {/* Center links */}
                 <div className="hidden md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:flex items-center font-medium gap-6">
                     <a href="#about" className="hover:text-gray-700">About Us</a>
                     <a href="#how-it-works" className="hover:text-gray-700">How it works</a>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile dropdown - always mounted, animate via classes */}
+            {/* Mobile dropdown menu */}
             <div
                 className={`md:hidden absolute top-full left-0 w-full bg-stone-50 shadow-md z-40 overflow-hidden transition-all duration-300 ease-in-out rounded-b-3xl
                     ${open ? 'opacity-100 translate-y-0 max-h-96' : 'opacity-0 -translate-y-2 max-h-0'}`}
