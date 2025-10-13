@@ -16,14 +16,15 @@ export default function Hero() {
                     <p className="text-white/90 max-w-2xl font-bold select-none">We grow together.</p>
                 </div>
             </div>
-            <div className="w-screen relative left-1/2 right-1/2 -translate-x-1/2 overflow-hidden h-[18vh] md:h-[24vh] lg:h-[32vh]">
+            <div className="w-screen relative left-1/2 right-1/2 -translate-x-1/2 overflow-hidden h-[30vh] md:h-[34vh] lg:h-[4  2vh]">
                 <Image
                     src="/top_wave.svg"
                     alt="Decorative wave"
                     width={1920}
                     height={240}
                     aria-hidden={true}
-                    className="block w-full h-full object-cover object-bottom"
+                    className="absolute inset-0 w-full h-full"
+                    style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
                 />
             </div>
             <a href="#about" aria-label="Scroll down" className="z-10 absolute bottom-4 left-1/2 -translate-x-1/2 text-black pointer-events-auto">
