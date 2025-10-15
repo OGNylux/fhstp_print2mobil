@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## TreeFund — Print2Mobile Project (FH St. Pölten)
 
-## Getting Started
+TreeFund is a university project at FH St. Pölten that explores how digital tools can make environmental action more tangible. The goal is simple: lower the barrier for people to fund trees and see the impact. The project’s focus is to bridge two worlds:
 
-First, run the development server:
+- Print2Mobile: turning physical touchpoints (like posters, flyers, QR codes) into instant digital actions
+- Transparent tree funding: clear steps from interest to donation to planted trees
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This repository contains the frontend prototype built with Next.js that showcases:
+- A clear story (hero section, About, How it works)
+- Interactive steps explaining the donation journey
+- A projects carousel highlighting potential initiatives
+- A simple contact form
+
+### Why a Tree Fund?
+Trees are one of the most effective nature-based solutions for climate mitigation and local resilience. A well-managed tree fund helps to:
+- Restore ecosystems and biodiversity
+- Improve air quality and reduce heat in urban areas
+- Protect coastlines and prevent erosion (e.g., mangroves)
+- Engage communities and educate the next generation
+
+By simplifying awareness (print), access (mobile), and action (donate), TreeFund aims to make it effortless to contribute.
+
+### About the Course/Context
+This project is part of coursework at FH St. Pölten (University of Applied Sciences St. Pölten). It demonstrates UX, frontend engineering, and communication design applied to a socially relevant topic.
+
+---
+
+## Tech Stack
+- Next.js 15 (App Router)
+- React 19
+- Tailwind CSS 4
+- shadcn/ui (custom Card + Carousel built on embla)
+
+---
+
+## Local Development (Windows PowerShell)
+
+Prerequisites:
+- Node.js 20+ (LTS recommended)
+- npm (comes with Node)
+
+Install dependencies:
+
+```powershell
+# from the repository root
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start the dev server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Then open:
 
-## Learn More
+- http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+Stop the server at any time with Ctrl+C.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Common tasks
+- Lint: `npm run lint`
+- Build: `npm run build`
+- Start (after build): `npm start`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Project Structure (high level)
+- `app/` — App Router pages and layout
+- `components/` — UI components (Navbar, Hero, Wave, Projects, HowItWorksSteps, Form, Footer)
+- `components/ui/` — shadcn-style primitives (Card, Carousel)
+- `lib/` — utilities
+- `public/` — static assets (images, SVGs)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
