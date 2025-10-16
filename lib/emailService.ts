@@ -70,9 +70,9 @@ export async function sendEmail(payload: Partial<EmailPayload>, options?: SendOp
 
   const { valid, errors } = validateEmailPayload(payload)
   if (!valid) {
-    const err = new Error('Validation failed: ' + errors.join('; '))
+    const err: Error & { validation?: string[] } = new Error('Validation failed: ' + errors.join('; '))
     // attach details for caller
-    ;(err as any).validation = errors
+    err.validation = errors
     throw err
   }
 
@@ -106,8 +106,8 @@ export async function sendEmail(payload: Partial<EmailPayload>, options?: SendOp
 
       if (!res.ok) {
         const text = await res.text().catch(() => '')
-        const error = new Error(`Request failed with status ${res.status}: ${text}`)
-        ;(error as any).status = res.status
+        const error: Error & { status?: number } = new Error(`Request failed with status ${res.status}: ${text}`)
+        error.status = res.status
         throw error
       }
 
@@ -118,7 +118,7 @@ export async function sendEmail(payload: Partial<EmailPayload>, options?: SendOp
       }
 
       return { success: true }
-    } catch (e) {
+    } catch (e: unknown) {
       lastError = e
       attempt += 1
       if (attempt > retries) break
@@ -154,16 +154,19 @@ export function buildPayload(input: HTMLFormElement | FormData | Record<string, 
   }
 
   // plain object
+  const obj = input as Record<string, unknown>
   return {
-    name: String((input as any).name ?? '').trim(),
-    email: String((input as any).email ?? '').trim(),
-    subject: String((input as any).subject ?? '').trim(),
-    message: String((input as any).message ?? '').trim(),
+    name: String(obj['name'] ?? '').trim(),
+    email: String(obj['email'] ?? '').trim(),
+    subject: String(obj['subject'] ?? '').trim(),
+    message: String(obj['message'] ?? '').trim(),
   }
 }
 
-export default {
+const EmailService = {
   sendEmail,
   validateEmailPayload,
   buildPayload,
 }
+
+export default EmailService
