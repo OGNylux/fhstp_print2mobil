@@ -18,7 +18,10 @@ export type SendOptions = {
   retries?: number
 }
 
-const DEFAULT_ENDPOINT = process.env.NEXT_PUBLIC_EMAIL_ENDPOINT || '/api/send-email'
+// If NEXT_PUBLIC_EMAIL_ENDPOINT is not set we treat the project as "client-only".
+// In that case we short-circuit sending and return a resolved success so the
+// UI (form) works in production without a backend.
+const DEFAULT_ENDPOINT = process.env.NEXT_PUBLIC_EMAIL_ENDPOINT ?? ''
 const DEFAULT_TIMEOUT = 8000
 const DEFAULT_RETRIES = 2
 
@@ -71,6 +74,15 @@ export async function sendEmail(payload: Partial<EmailPayload>, options?: SendOp
     // attach details for caller
     ;(err as any).validation = errors
     throw err
+  }
+
+  // If no endpoint is configured, skip network logic and return a local success.
+  // This allows the form to work in production environments that don't have a
+  // backend hooked up. Consumers can still enable real sending by setting
+  // NEXT_PUBLIC_EMAIL_ENDPOINT.
+  if (!endpoint) {
+    // mimic async remote response
+    return Promise.resolve({ success: true, simulated: true })
   }
 
   const body = JSON.stringify({
