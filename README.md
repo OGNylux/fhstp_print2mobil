@@ -18,6 +18,8 @@ This repository contains the frontend prototype built with Next.js that showcase
 - React 19
 - Tailwind CSS 4
 - shadcn/ui (custom Card + Carousel built on embla)
+- Figma
+    -> Figma design file: https://www.figma.com/design/RFCLD7Gf6Q1XdflAIhVoOV/TreeFund?node-id=0-1&t=ON2zp8dr2kQLjpeD-1
 
 ---
 
