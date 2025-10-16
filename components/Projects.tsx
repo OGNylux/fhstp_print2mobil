@@ -4,6 +4,8 @@ import * as React from "react"
 import Image from "next/image"
 
 import { Card, CardContent } from "@/components/ui/card"
+import Link from 'next/link'
+import { projects as projectsData } from '@/lib/projects'
 import {
   Carousel,
   CarouselContent,
@@ -20,32 +22,7 @@ interface Project {
   imageUrl: string;
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Amazon Rainforest Restoration",
-    description: "Helping to restore the lungs of our planet by planting native species in deforested areas of the Amazon rainforest. Every tree planted helps combat climate change and preserves biodiversity.",
-    imageUrl: "/people.jpg",
-  },
-  {
-    id: 2,
-    title: "Urban Green Spaces Initiative",
-    description: "Creating green oases in urban environments to improve air quality and provide natural spaces for city dwellers. Building sustainable communities one tree at a time.",
-    imageUrl: "/people.jpg",
-  },
-  {
-    id: 3,
-    title: "Coastal Mangrove Protection",
-    description: "Protecting and expanding mangrove forests along coastlines to prevent erosion, provide wildlife habitats, and create natural barriers against storms and flooding.",
-    imageUrl: "/people.jpg",
-  },
-  {
-    id: 4,
-    title: "School Garden Programs",
-    description: "Educating the next generation about environmental stewardship through hands-on tree planting and garden maintenance programs in schools worldwide.",
-    imageUrl: "/people.jpg",
-  }
-];
+const projects = projectsData
 
 export default function Projects() {
   const [api, setApi] = React.useState<CarouselApi>()
@@ -90,6 +67,9 @@ export default function Projects() {
                     <p className="text-sm md:text-base text-center leading-relaxed flex-grow flex items-center">
                       {project.description}
                     </p>
+                    <div className="mt-4">
+                      <Link href={`/projects/${project.id}`} className="text-lime-600 font-semibold hover:underline">Learn more</Link>
+                    </div>
                   </CardContent>
                 </Card>
               </div>

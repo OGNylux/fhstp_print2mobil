@@ -73,7 +73,7 @@ export default function Form() {
                     <button
                         type="submit"
                         disabled={status === 'sending'}
-                        className="bg-lime-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-lime-600 transition-colors disabled:opacity-60"
+                        className={`bg-lime-500 text-white font-semibold py-2 px-4 rounded-md transition-colors disabled:opacity-60 ${status === 'idle' ? 'cursor-pointer hover:bg-lime-600' : 'cursor-not-allowed'}`}
                     >
                         {status === 'sending' ? 'Sending…' : 'Send Message'}
                     </button>
