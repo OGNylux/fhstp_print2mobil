@@ -15,8 +15,8 @@ export default function Form() {
             //await emailService.sendEmail(payload)
             setStatus('success')
             e.currentTarget.reset()
-        } catch (err: any) {
-            // console.error('Failed to send email payload', err)
+        } catch {
+            // failed to send — keep UI stable
             setStatus('idle')
         }
     }

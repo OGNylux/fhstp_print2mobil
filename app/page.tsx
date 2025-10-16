@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Wave from "@/components/Wave";
 import HowItWorksSteps from "@/components/HowItWorksSteps/HowItWorksSteps";
-import { Carousel, CarouselItem } from "@/components/ui/carousel";
 import Projects from "@/components/Projects";
 import Form from "@/components/Form";
 import Footer from "@/components/Footer";

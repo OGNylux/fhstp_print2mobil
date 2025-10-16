@@ -22,7 +22,7 @@ interface Project {
   imageUrl: string;
 }
 
-const projects = projectsData
+const projects: Project[] = projectsData
 
 export default function Projects() {
   const [api, setApi] = React.useState<CarouselApi>()
