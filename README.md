@@ -11,18 +11,6 @@ This repository contains the frontend prototype built with Next.js that showcase
 - A projects carousel highlighting potential initiatives
 - A simple contact form
 
-### Why a Tree Fund?
-Trees are one of the most effective nature-based solutions for climate mitigation and local resilience. A well-managed tree fund helps to:
-- Restore ecosystems and biodiversity
-- Improve air quality and reduce heat in urban areas
-- Protect coastlines and prevent erosion (e.g., mangroves)
-- Engage communities and educate the next generation
-
-By simplifying awareness (print), access (mobile), and action (donate), TreeFund aims to make it effortless to contribute.
-
-### About the Course/Context
-This project is part of coursework at FH St. Pölten (University of Applied Sciences St. Pölten). It demonstrates UX, frontend engineering, and communication design applied to a socially relevant topic.
-
 ---
 
 ## Tech Stack

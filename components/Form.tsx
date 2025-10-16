@@ -23,6 +23,16 @@ export default function Form() {
                     />
                 </div>
                 <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-black mb-1">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                        placeholder="Your Subject"
+                        required
+                    />
+                </div>
+                <div>
                     <label htmlFor="message" className="block text-sm font-medium text-black mb-1">Message</label>
                     <textarea
                         id="message"
