@@ -79,7 +79,7 @@ export default function Form() {
                     </button>
 
                     {status === 'success' && (
-                        <span className="text-green-600 font-medium">Message sent — thank you!</span>
+                        <span className="text-green-600 font-medium">Message sent - thank you!</span>
                     )}
                 </div>
             </form>
