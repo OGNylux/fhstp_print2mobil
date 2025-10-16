@@ -21,16 +21,12 @@ export default function Home() {
               <h2 className="text-2xl md:text-4xl text-black font-bold mb-4 md:mb-6">About Us</h2>
               <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 border-2 p-4 md:p-6 rounded-lg bg-white border-lime-500 text-black">
                 <p className="text-sm md:text-base leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.
-                  Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.
+                  TreeFund is a community-driven initiative that helps plant and maintain trees in urban and rural areas. Our mission is to increase canopy cover, support biodiversity, and strengthen communities by funding local planting projects, supporting volunteer groups, and making tree care resources widely available. We work closely with urban foresters, schools, and neighbourhood volunteers to match the right species to each site and ensure long-term survival.
                 </p>
                 <Image src="/people.jpg" width={800} height={450} alt="team" className="w-full rounded-md object-cover aspect-[16/9]" />
                 <Image src="/people.jpg" width={800} height={450} alt="entwicklung" className="w-full rounded-md object-cover aspect-[16/9]" />
                 <p className="text-sm md:text-base leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.
-                  Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.
+                  We fund and support local planting campaigns, provide easy-to-follow planting and maintenance guides, and offer a simple way for donors and volunteers to track impact. Through partnerships with schools, parks departments and neighbourhood groups, TreeFund makes it easy to sponsor a planting, volunteer for a planting day, or learn how to care for newly planted trees. You can support a local project by donating, signing up to volunteer, or requesting a planting guide for your community.
                 </p>
               </div>
             </div>
