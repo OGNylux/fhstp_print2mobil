@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react'
-import emailService, { buildPayload } from '../lib/emailService'
+//import emailService, { buildPayload } from '../lib/emailService'
 
 export default function Form() {
     const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle')
@@ -11,8 +11,8 @@ export default function Form() {
         setStatus('sending')
 
         try {
-            const payload = buildPayload(e.currentTarget)
-            await emailService.sendEmail(payload)
+            //const payload = buildPayload(e.currentTarget)
+            //await emailService.sendEmail(payload)
             setStatus('success')
             e.currentTarget.reset()
         } catch (err: any) {
